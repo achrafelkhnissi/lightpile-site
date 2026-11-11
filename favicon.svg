@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .pile { fill: #1c1d24; }
+    .light { fill: #5b5bd6; }
+    @media (prefers-color-scheme: dark) {
+      .pile { fill: #f2f2f5; }
+      .light { fill: #a5a5ee; }
+    }
+  </style>
+  <rect class="pile" x="8" y="3.1" width="16" height="16" rx="1" transform="rotate(45 16 11.1)" />
+  <circle class="light" cx="16" cy="27.44" r="4.36" />
+</svg>

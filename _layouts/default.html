@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{{ page.title }} · Lightpile</title>
+    <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml" />
+    <style>
+      @font-face {
+        font-family: "IBM Plex Sans";
+        font-weight: 100 700;
+        font-display: swap;
+        src: url("{{ '/assets/plex-sans-latin.woff2' | relative_url }}") format("woff2");
+      }
+      :root {
+        --ink: #1c1d24;
+        --muted: #5f6170;
+        --line: #e4e4ea;
+        --canvas: #f6f6f8;
+        --pane: #ffffff;
+        --accent: #5b5bd6;
+        --diamond: #1c1d24;
+        --ball: #5b5bd6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f2f2f5;
+          --muted: #a9abb8;
+          --line: #2c2d36;
+          --canvas: #141518;
+          --pane: #1c1d24;
+          --accent: #a5a5ee;
+          --diamond: #f2f2f5;
+          --ball: #a5a5ee;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--canvas);
+        color: var(--ink);
+        font: 16px/1.6 "IBM Plex Sans", system-ui, sans-serif;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 28px 24px 0;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      header svg {
+        width: 26px;
+        height: 26px;
+      }
+      header rect {
+        fill: var(--diamond);
+      }
+      header circle {
+        fill: var(--ball);
+      }
+      main {
+        max-width: 760px;
+        margin: 20px auto 64px;
+        padding: 32px 40px 40px;
+        background: var(--pane);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 0 0 6px;
+        letter-spacing: -0.01em;
+      }
+      h1 + p {
+        color: var(--muted);
+        margin-top: 0;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 32px 0 8px;
+      }
+      ul {
+        padding-inline-start: 22px;
+      }
+      li {
+        margin: 6px 0;
+      }
+      a {
+        color: var(--accent);
+      }
+      @media (max-width: 640px) {
+        header {
+          padding: 20px 16px 0;
+        }
+        main {
+          margin: 16px 0 40px;
+          padding: 24px 16px 32px;
+          border-radius: 0;
+          border-inline: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect x="8" y="3.1" width="16" height="16" rx="1" transform="rotate(45 16 11.1)"></rect>
+        <circle cx="16" cy="27.44" r="4.36"></circle>
+      </svg>
+      <span>Lightpile</span>
+    </header>
+    <main>{{ content }}</main>
+  </body>
+</html>
