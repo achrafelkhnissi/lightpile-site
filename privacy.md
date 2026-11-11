@@ -63,4 +63,4 @@ If what Lightpile stores or sends ever changes, this policy will be updated befo
 
 ## Contact
 
-To decide before submission: an email address for privacy questions.
+For questions about this policy or your data, email [achraf.elkhnissi@gmail.com](mailto:achraf.elkhnissi@gmail.com).
